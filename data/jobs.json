@@ -1,10 +1,165 @@
 {
  "meta": {
-  "last_updated": null,
+  "last_updated": "2026-10-08T04:47:33+00:00",
   "location_label": "Seattle area",
-  "total": 0,
-  "sources": [],
+  "total": 5,
+  "sources": [
+   {
+    "name": "Adzuna (many job boards)",
+    "type": "adzuna",
+    "state": "off",
+    "count": 0,
+    "message": "Off. Add ADZUNA_APP_ID and ADZUNA_APP_KEY as repository secrets to turn it on."
+   },
+   {
+    "name": "USAJobs (federal, e.g. VA, FDA)",
+    "type": "usajobs",
+    "state": "off",
+    "count": 0,
+    "message": "Off. Add USAJOBS_API_KEY and USAJOBS_EMAIL as repository secrets to turn it on."
+   },
+   {
+    "name": "Gates Foundation",
+    "type": "workday",
+    "state": "ok",
+    "count": 31,
+    "message": ""
+   },
+   {
+    "name": "Amazon & Whole Foods",
+    "type": "amazon",
+    "state": "ok",
+    "count": 62,
+    "message": ""
+   },
+   {
+    "name": "Fred Hutch",
+    "type": "icims",
+    "state": "ok",
+    "count": 54,
+    "message": ""
+   },
+   {
+    "name": "UW Public Health job board",
+    "type": "uw_sph_board",
+    "state": "ok",
+    "count": 0,
+    "message": ""
+   },
+   {
+    "name": "King County",
+    "type": "neogov_rss",
+    "state": "ok",
+    "count": 127,
+    "message": ""
+   },
+   {
+    "name": "Washington State",
+    "type": "neogov_rss",
+    "state": "ok",
+    "count": 691,
+    "message": ""
+   },
+   {
+    "name": "City of Seattle",
+    "type": "neogov_rss",
+    "state": "ok",
+    "count": 63,
+    "message": ""
+   }
+  ],
   "version": 1
  },
- "jobs": []
+ "jobs": [
+  {
+   "id": "fba47c4a06c2",
+   "title": "Nurse Supervisor - First Steps and WIC Programs at White Center Public Health Center",
+   "org": "King County",
+   "location": "Various Locations throughout King County",
+   "url": "https://www.governmentjobs.com/careers/kingcounty/jobs/5499363",
+   "posted": "2026-10-03T05:50:15+00:00",
+   "first_seen": "2026-10-08T04:47:33+00:00",
+   "last_seen": "2026-10-08T04:47:33+00:00",
+   "salary": "",
+   "category": "Public health & WIC",
+   "score": 12,
+   "match": 86,
+   "senior": false,
+   "remote": false,
+   "seattle": false,
+   "source": "King County"
+  },
+  {
+   "id": "65382c7007d0",
+   "title": "Registered Dietitian II",
+   "org": "Fred Hutch",
+   "location": "Seattle, WA",
+   "url": "https://careers-fhcrc.icims.com/jobs/31517/registered-dietitian-ii/job",
+   "posted": null,
+   "first_seen": "2026-10-08T04:47:33+00:00",
+   "last_seen": "2026-10-08T04:47:33+00:00",
+   "salary": "",
+   "category": "Clinical",
+   "score": 8,
+   "match": 57,
+   "senior": false,
+   "remote": false,
+   "seattle": true,
+   "source": "Fred Hutch"
+  },
+  {
+   "id": "b4cb79bdb0c3",
+   "title": "Registered Dietitian I",
+   "org": "Fred Hutch",
+   "location": "Seattle, WA",
+   "url": "https://careers-fhcrc.icims.com/jobs/31343/registered-dietitian-i/job",
+   "posted": null,
+   "first_seen": "2026-10-08T04:47:33+00:00",
+   "last_seen": "2026-10-08T04:47:33+00:00",
+   "salary": "",
+   "category": "Clinical",
+   "score": 8,
+   "match": 57,
+   "senior": false,
+   "remote": false,
+   "seattle": true,
+   "source": "Fred Hutch"
+  },
+  {
+   "id": "9d5ac70e8a60",
+   "title": "Human Services Program Supervisor Sr.",
+   "org": "City of Seattle",
+   "location": "Seattle Municipal Tower, 700 5th Ave., Seattle",
+   "url": "https://www.governmentjobs.com/careers/seattle/jobs/5499210",
+   "posted": "2026-10-06T19:34:07+00:00",
+   "first_seen": "2026-10-08T04:47:33+00:00",
+   "last_seen": "2026-10-08T04:47:33+00:00",
+   "salary": "",
+   "category": "Other",
+   "score": 4,
+   "match": 29,
+   "senior": false,
+   "remote": false,
+   "seattle": true,
+   "source": "City of Seattle"
+  },
+  {
+   "id": "67e0aae4d130",
+   "title": "Senior Officer, Model Frameworks – Global Health",
+   "org": "Gates Foundation",
+   "location": "Seattle, WA",
+   "url": "https://gatesfoundation.wd1.myworkdayjobs.com/en-US/Gates/job/Seattle-WA/Senior-Officer--Model-Frameworks---Global-Health_B021786-1",
+   "posted": "2026-10-06T04:47:37+00:00",
+   "first_seen": "2026-10-08T04:47:33+00:00",
+   "last_seen": "2026-10-08T04:47:33+00:00",
+   "salary": "",
+   "category": "Global health",
+   "score": 4,
+   "match": 29,
+   "senior": false,
+   "remote": false,
+   "seattle": true,
+   "source": "Gates Foundation"
+  }
+ ]
 }
