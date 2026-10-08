@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Job Facts</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#E9EFE7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1410" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Job Facts">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥕</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --page: #E9EFE7;
+    --panel: #FFFFFF;
+    --ink: #000000;
+    --text: #1D231F;
+    --muted: #56615A;
+    --line: #C7D1C8;
+    --accent: #1E6A44;
+    --mark: #F7DC4A;
+    --font: "Libre Franklin", "Franklin Gothic Medium", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page: #0E1410;
+      --panel: #000000;
+      --ink: #F2F5F2;
+      --text: #E3EAE5;
+      --muted: #9BA8A0;
+      --line: #2B362F;
+      --accent: #7CCB9F;
+      --mark: #F2D33C;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.5;
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  }
+  a { color: var(--accent); }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .wrap { max-width: 36rem; margin: 0 auto; padding: 1rem 1rem 3rem; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  /* ---------- The facts panel: the one loud thing on the page ---------- */
+  .facts {
+    background: var(--panel);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    padding: .3rem .6rem .55rem;
+  }
+  .facts h1 {
+    font-weight: 900;
+    font-size: clamp(2.5rem, 12vw, 3.4rem);
+    line-height: .95;
+    letter-spacing: -0.015em;
+    margin: .1rem 0 .2rem;
+  }
+  .rule-xl { height: 10px; background: var(--ink); margin: .3rem 0 .2rem; }
+  .rule-l  { height: 5px;  background: var(--ink); margin: .2rem 0 0; }
+  .facts .line { display: flex; justify-content: space-between; gap: 1rem; font-size: 1.02rem; line-height: 1.35; }
+  .facts .line b { font-weight: 800; text-align: right; }
+  .facts .big { display: flex; justify-content: space-between; align-items: flex-end; }
+  .facts .big .label { font-weight: 900; font-size: 1.55rem; line-height: 1.1; }
+  .facts .big .num { font-weight: 900; font-size: 2.9rem; line-height: .95; }
+  .facts .dvhead { text-align: right; font-weight: 800; font-size: .86rem; padding: .25rem 0 .15rem; border-bottom: 1px solid var(--ink); }
+  .facts .group { font-weight: 800; padding: .3rem 0; border-bottom: 1px solid var(--ink); }
+  .factrow {
+    display: flex; justify-content: space-between; align-items: baseline; gap: .75rem;
+    width: 100%; min-height: 2.3rem;
+    padding: .3rem 0; margin: 0;
+    background: none; color: inherit; font: inherit; text-align: left;
+    border: 0; border-bottom: 1px solid var(--ink); cursor: pointer;
+  }
+  .factrow .name b { font-weight: 800; }
+  .factrow .name .count { font-weight: 400; margin-left: .35rem; }
+  .factrow .pct { font-weight: 800; }
+  .factrow.sub .name { padding-left: 1rem; }
+  .factrow[aria-pressed="true"] { background: var(--ink); color: var(--panel); box-shadow: -.6rem 0 0 var(--ink), .6rem 0 0 var(--ink); }
+  .factrow:disabled { cursor: default; opacity: .55; }
+  .facts .foot { font-size: .78rem; line-height: 1.4; margin: .45rem 0 0; }
+
+  /* ---------- Controls ---------- */
+  .actions { display: flex; gap: .5rem; margin: 1rem 0 .35rem; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 2.75rem; padding: .5rem 1rem;
+    font: 800 1rem/1.1 var(--font);
+    border: 2px solid var(--ink); background: var(--panel); color: var(--ink);
+    text-decoration: none; cursor: pointer;
+  }
+  .btn.primary { background: var(--ink); color: var(--panel); }
+  .btn[aria-disabled="true"] { opacity: .5; pointer-events: none; }
+  .hint { color: var(--muted); font-size: .86rem; margin: 0 0 1rem; }
+
+  .search { width: 100%; min-height: 2.9rem; padding: .55rem .75rem; font: 400 1rem var(--font); color: var(--text);
+            background: var(--panel); border: 1px solid var(--muted); border-radius: 0; }
+  .toggles { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: .6rem 0 .25rem; }
+  .chip {
+    min-height: 2.4rem; padding: .35rem .8rem; font: 600 .92rem var(--font);
+    border: 1px solid var(--muted); background: transparent; color: var(--text); cursor: pointer; border-radius: 999px;
+  }
+  .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--panel); }
+  .sort { margin-left: auto; font: 600 .92rem var(--font); color: var(--text); }
+  .sort select { font: 600 .92rem var(--font); color: var(--text); background: var(--panel); border: 1px solid var(--muted); min-height: 2.4rem; padding: 0 .4rem; }
+
+  .status { color: var(--muted); font-size: .9rem; margin: .75rem 0 0; min-height: 1.4em; }
+
+  /* ---------- Role list ---------- */
+  .list { margin-top: .25rem; }
+  .job { display: grid; grid-template-columns: 1fr auto; gap: .1rem .9rem; padding: .95rem 0 .8rem; border-bottom: 1px solid var(--line); }
+  .job h2 { font-size: 1.07rem; font-weight: 800; line-height: 1.3; margin: 0; }
+  .job h2 a { color: var(--text); text-decoration: none; }
+  .job h2 a:hover { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+  .newmark { background: var(--mark); color: #000; font-weight: 800; font-size: .78rem; padding: .05rem .3rem; margin-right: .4rem; vertical-align: .1em; }
+  .job .org { font-weight: 600; margin: .15rem 0 0; }
+  .job .meta { color: var(--muted); font-size: .9rem; margin: 0; }
+  .job .pay { font-size: .9rem; margin: 0; }
+  .job .pct { text-align: right; font-weight: 900; font-size: 1.3rem; line-height: 1.05; grid-row: 1 / span 2; grid-column: 2; }
+  .job .pct small { display: block; font-weight: 600; font-size: .72rem; color: var(--muted); }
+  .job .acts { grid-column: 1 / -1; display: flex; gap: .5rem; margin-top: .55rem; flex-wrap: wrap; }
+  .mini {
+    min-height: 2.25rem; padding: .25rem .8rem; font: 600 .88rem var(--font);
+    border: 1px solid var(--line); background: var(--panel); color: var(--text); cursor: pointer; text-decoration: none;
+    display: inline-flex; align-items: center;
+  }
+  .mini[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 800; }
+  .job.is-hidden { opacity: .55; }
+
+  .empty { padding: 1.4rem 0; }
+  .empty h2 { font-size: 1.15rem; font-weight: 800; margin: 0 0 .35rem; }
+  .empty p { margin: 0 0 .75rem; }
+
+  /* ---------- Bottom sections ---------- */
+  section.more { margin-top: 2.25rem; }
+  section.more h2 { font-size: 1.15rem; font-weight: 900; margin: 0 0 .25rem; padding-bottom: .3rem; border-bottom: 5px solid var(--ink); color: var(--ink); }
+  section.more p.lede { color: var(--muted); font-size: .9rem; margin: .4rem 0 .4rem; }
+  .links { list-style: none; padding: 0; margin: 0; }
+  .links li { border-bottom: 1px solid var(--line); }
+  .links a { display: block; padding: .65rem 0; font-weight: 600; text-decoration: none; }
+  .links a:hover { text-decoration: underline; }
+  .sources { list-style: none; padding: 0; margin: 0; font-size: .92rem; }
+  .sources li { display: grid; grid-template-columns: 1fr auto; gap: .1rem 1rem; padding: .55rem 0; border-bottom: 1px solid var(--line); }
+  .sources .state { font-weight: 800; text-align: right; }
+  .sources .state.ok { color: var(--accent); }
+  .sources .msg { grid-column: 1 / -1; color: var(--muted); font-size: .84rem; }
+
+  @media (min-width: 40rem) {
+    .wrap { padding-top: 2rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <section class="facts" aria-labelledby="facts-title">
+    <h1 id="facts-title">Job Facts</h1>
+    <div class="line"><span>Serving size</span><b id="f-serving">Seattle area roles</b></div>
+    <div class="line"><span>Last search</span><b id="f-updated">Not run yet</b></div>
+    <div class="rule-xl"></div>
+    <div class="big"><span class="label">Roles found</span><span class="num" id="f-total">0</span></div>
+    <div class="rule-l"></div>
+    <div class="dvhead">% of roles*</div>
+    <div id="f-rows"></div>
+    <div class="rule-xl"></div>
+    <p class="foot">* Tap a line to filter the list. Match % on each role is a keyword score against your background: registered dietitian, MPH in epidemiology, food regulation, and child nutrition work. Keywords live in config.json.</p>
+  </section>
+
+  <div class="actions">
+    <a class="btn primary" id="run-btn" target="_blank" rel="noopener">Run a fresh search</a>
+    <button class="btn" id="reload-btn" type="button">Reload list</button>
+  </div>
+  <p class="hint" id="run-hint">New searches run on their own every morning and evening. For one right now, tap "Run a fresh search", then "Run workflow". Reload this page in about two minutes.</p>
+
+  <label class="sr" for="q">Search roles</label>
+  <input class="search" id="q" type="search" placeholder="Search titles, employers, places" autocomplete="off">
+  <div class="toggles">
+    <button class="chip" type="button" id="t-seattle" aria-pressed="false">Seattle only</button>
+    <button class="chip" type="button" id="t-senior" aria-pressed="true">Hide senior roles</button>
+    <label class="sort">Sort
+      <select id="sort">
+        <option value="match">Best match</option>
+        <option value="newest">Newest</option>
+      </select>
+    </label>
+  </div>
+  <p class="status" id="status" role="status" aria-live="polite"></p>
+
+  <div class="list" id="list"></div>
+
+  <section class="more" aria-labelledby="links-title">
+    <h2 id="links-title">Also worth checking</h2>
+    <p class="lede">Saved searches on sites the automatic search can't reach, plus employers worth checking directly.</p>
+    <ul class="links" id="links"></ul>
+  </section>
+
+  <section class="more" aria-labelledby="src-title">
+    <h2 id="src-title">Where these roles come from</h2>
+    <p class="lede" id="src-lede">Each source is searched separately. If one stops working, the rest still update.</p>
+    <ul class="sources" id="sources"></ul>
+  </section>
+</main>
+
+<script>
+(() => {
+  "use strict";
+
+  // ---------- storage (works on GitHub Pages; fails quietly elsewhere) ----------
+  const store = {
+    get(key, fallback) {
+      try { const v = localStorage.getItem(key); return v === null ? fallback : JSON.parse(v); } catch { return fallback; }
+    },
+    set(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* ignore */ } },
+  };
+  function sessionGet(key) { try { return sessionStorage.getItem(key); } catch { return null; } }
+  function sessionSet(key, v) { try { sessionStorage.setItem(key, v); } catch { /* ignore */ } }
+
+  // "New" means first seen since the previous visit. Kept steady for the whole browsing session.
+  let prevVisit = Number(sessionGet("jf.prevVisit"));
+  if (!prevVisit) {
+    prevVisit = Number(store.get("jf.lastVisit", 0)) || 0;
+    sessionSet("jf.prevVisit", String(prevVisit || -1));
+    store.set("jf.lastVisit", Date.now());
+  }
+  if (prevVisit === -1) prevVisit = 0;
+  const NEW_WINDOW_MS = 3 * 24 * 3600 * 1000; // first visit: anything from the last 3 days counts as new
+
+  const saved = new Set(store.get("jf.saved", []));
+  const hidden = new Set(store.get("jf.hidden", []));
+
+  const ui = {
+    view: "all",               // all | new | saved | <category name>
+    q: "",
+    seattle: store.get("jf.seattle", false),
+    hideSenior: store.get("jf.hideSenior", true),
+    sort: store.get("jf.sort", "match"),
+    showHidden: false,
+  };
+
+  let data = { meta: {}, jobs: [] };
+  let config = { quick_links: [], categories: [] };
+
+  // ---------- small DOM helper that never injects HTML ----------
+  function el(tag, attrs, ...kids) {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs || {})) {
+      if (v === null || v === undefined || v === false) continue;
+      if (k === "class") n.className = v;
+      else if (k === "text") n.textContent = v;
+      else if (k.startsWith("on")) n.addEventListener(k.slice(2), v);
+      else n.setAttribute(k, v === true ? "" : v);
+    }
+    for (const kid of kids.flat()) {
+      if (kid === null || kid === undefined || kid === false) continue;
+      n.append(kid instanceof Node ? kid : document.createTextNode(String(kid)));
+    }
+    return n;
+  }
+  const safeUrl = (u) => (typeof u === "string" && /^https?:\/\//i.test(u)) ? u : null;
+  const $ = (id) => document.getElementById(id);
+
+  // ---------- dates ----------
+  function relTime(iso) {
+    if (!iso) return "";
+    const t = Date.parse(iso);
+    if (Number.isNaN(t)) return "";
+    const days = Math.floor((Date.now() - t) / 86400000);
+    if (days <= 0) return "today";
+    if (days === 1) return "yesterday";
+    if (days < 14) return `${days} days ago`;
+    return new Date(t).toLocaleDateString(undefined, { month: "short", day: "numeric" });
+  }
+  function updatedLabel(iso) {
+    if (!iso) return "Not run yet";
+    const d = new Date(iso);
+    const today = new Date();
+    const sameDay = d.toDateString() === today.toDateString();
+    const y = new Date(today); y.setDate(today.getDate() - 1);
+    const time = d.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+    if (sameDay) return `Today ${time}`;
+    if (d.toDateString() === y.toDateString()) return `Yesterday ${time}`;
+    return `${d.toLocaleDateString(undefined, { month: "short", day: "numeric" })} ${time}`;
+  }
+
+  // ---------- GitHub "Run workflow" link ----------
+  function repoSlug() {
+    if (config.repo) return config.repo;
+    const m = location.hostname.match(/^([^.]+)\.github\.io$/i);
+    if (!m) return null;
+    const first = location.pathname.split("/").filter(Boolean)[0];
+    return first ? `${m[1]}/${first}` : `${m[1]}/${m[1]}.github.io`;
+  }
+
+  // ---------- filtering ----------
+  const isNew = (j) => {
+    const t = Date.parse(j.first_seen);
+    if (Number.isNaN(t)) return false;
+    return prevVisit ? t > prevVisit : Date.now() - t < NEW_WINDOW_MS;
+  };
+
+  function pool() {
+    // Everything the toggles allow, before the facts-row view and the search box.
+    return data.jobs.filter((j) =>
+      (ui.showHidden || !hidden.has(j.id)) &&
+      (!ui.hideSenior || !j.senior) &&
+      (!ui.seattle || j.seattle)
+    );
+  }
+
+  function visible() {
+    const q = ui.q.trim().toLowerCase();
+    let list = pool().filter((j) => {
+      if (ui.view === "new" && !isNew(j)) return false;
+      if (ui.view === "saved" && !saved.has(j.id)) return false;
+      if (!["all", "new", "saved"].includes(ui.view) && j.category !== ui.view) return false;
+      if (q && !`${j.title} ${j.org} ${j.location} ${j.category}`.toLowerCase().includes(q)) return false;
+      return true;
+    });
+    const when = (j) => Date.parse(j.posted || j.first_seen) || 0;
+    list.sort(ui.sort === "newest"
+      ? (a, b) => when(b) - when(a) || b.match - a.match
+      : (a, b) => b.match - a.match || when(b) - when(a));
+    return list;
+  }
+
+  // ---------- rendering ----------
+  function factRow({ view, label, count, total, sub, bold }) {
+    const pct = total ? Math.round((100 * count) / total) : 0;
+    const pressed = ui.view === view;
+    return el("button", {
+      class: "factrow" + (sub ? " sub" : ""), type: "button",
+      "aria-pressed": String(pressed),
+      disabled: count === 0 && !pressed ? true : null,
+      onclick: () => { ui.view = pressed ? "all" : view; render(); },
+    },
+      el("span", { class: "name" }, bold ? el("b", { text: label }) : label, el("span", { class: "count", text: String(count) })),
+      el("span", { class: "pct", text: `${pct}%` })
+    );
+  }
+
+  function renderFacts(p) {
+    $("f-serving").textContent = `${data.meta.location_label || "Seattle area"} roles`;
+    $("f-updated").textContent = updatedLabel(data.meta.last_updated);
+    $("f-total").textContent = String(p.length);
+
+    const rows = $("f-rows");
+    rows.replaceChildren();
+    const total = p.length;
+    rows.append(
+      factRow({ view: "new", label: "New since last visit", count: p.filter(isNew).length, total, bold: true }),
+      factRow({ view: "saved", label: "Saved", count: p.filter((j) => saved.has(j.id)).length, total, bold: true }),
+      el("div", { class: "group", text: "By type" })
+    );
+    const names = (config.categories || []).map((c) => c.name);
+    const present = new Set(p.map((j) => j.category));
+    for (const extra of present) if (!names.includes(extra)) names.push(extra);
+    for (const name of names) {
+      const count = p.filter((j) => j.category === name).length;
+      if (count === 0 && ui.view !== name) continue;
+      rows.append(factRow({ view: name, label: name, count, total, sub: true }));
+    }
+  }
+
+  function jobRow(j) {
+    const url = safeUrl(j.url);
+    const isSaved = saved.has(j.id);
+    const isHid = hidden.has(j.id);
+    const when = j.posted ? `Posted ${relTime(j.posted)}` : `First seen ${relTime(j.first_seen)}`;
+    const where = [j.location, j.remote && !/remote/i.test(j.location || "") ? "Remote" : null].filter(Boolean).join(", ");
+
+    return el("article", { class: "job" + (isHid ? " is-hidden" : "") },
+      el("div", {},
+        el("h2", {},
+          isNew(j) ? el("span", { class: "newmark", text: "New" }) : null,
+          url ? el("a", { href: url, target: "_blank", rel: "noopener noreferrer", text: j.title }) : j.title
+        ),
+        el("p", { class: "org", text: j.org || "Employer not listed" }),
+        where ? el("p", { class: "meta", text: where }) : null,
+        el("p", { class: "meta", text: `${when}. ${j.category}. Found via ${j.source}.` }),
+        j.salary ? el("p", { class: "pay", text: j.salary }) : null
+      ),
+      el("p", { class: "pct", "aria-label": `${j.match} percent match` }, `${j.match}%`, el("small", { text: "match" })),
+      el("div", { class: "acts" },
+        url ? el("a", { class: "mini", href: url, target: "_blank", rel: "noopener noreferrer", text: "Open posting" }) : null,
+        el("button", {
+          class: "mini", type: "button", "aria-pressed": String(isSaved),
+          onclick: () => { isSaved ? saved.delete(j.id) : saved.add(j.id); store.set("jf.saved", [...saved]); render(); },
+        }, isSaved ? "Saved" : "Save"),
+        el("button", {
+          class: "mini", type: "button",
+          onclick: () => { isHid ? hidden.delete(j.id) : hidden.add(j.id); store.set("jf.hidden", [...hidden]); render(); },
+        }, isHid ? "Unhide" : "Hide")
+      )
+    );
+  }
+
+  function renderList() {
+    const list = $("list");
+    list.replaceChildren();
+
+    if (!data.meta.last_updated) {
+      const slug = repoSlug();
+      list.append(el("div", { class: "empty" },
+        el("h2", { text: "No search has run yet" }),
+        el("p", { text: slug
+          ? "Tap \"Run a fresh search\" above, then \"Run workflow\" on GitHub. Roles show up here about two minutes later."
+          : "Open this page from its github.io address, then run the \"Update job listings\" workflow once from the Actions tab on GitHub." })
+      ));
+      $("status").textContent = "";
+      return;
+    }
+
+    const items = visible();
+    const hiddenCount = data.jobs.filter((j) => hidden.has(j.id)).length;
+    const viewName = ui.view === "all" ? "" : ui.view === "new" ? "new " : ui.view === "saved" ? "saved " : `${ui.view} `;
+    $("status").textContent = `Showing ${items.length} ${viewName}role${items.length === 1 ? "" : "s"}${ui.q ? ` matching "${ui.q}"` : ""}.`;
+
+    if (items.length === 0) {
+      list.append(el("div", { class: "empty" },
+        el("h2", { text: ui.view === "saved" ? "Nothing saved yet" : "No roles match these filters" }),
+        el("p", { text: ui.view === "saved"
+          ? "Tap Save on any role to keep it here."
+          : "Clear the filters to see every role from the latest search." }),
+        el("button", { class: "btn", type: "button", onclick: clearFilters }, "Clear filters")
+      ));
+    } else {
+      for (const j of items) list.append(jobRow(j));
+    }
+
+    if (hiddenCount) {
+      list.append(el("p", { class: "status" },
+        el("button", { class: "mini", type: "button", onclick: () => { ui.showHidden = !ui.showHidden; render(); } },
+          ui.showHidden ? "Leave hidden roles out" : `Show ${hiddenCount} hidden role${hiddenCount === 1 ? "" : "s"}`)
+      ));
+    }
+  }
+
+  function renderLinks() {
+    const ul = $("links");
+    ul.replaceChildren(...(config.quick_links || [])
+      .filter((l) => safeUrl(l.url))
+      .map((l) => el("li", {}, el("a", { href: l.url, target: "_blank", rel: "noopener noreferrer", text: l.name }))));
+  }
+
+  function renderSources() {
+    const ul = $("sources");
+    const s = data.meta.sources || [];
+    if (!s.length) { ul.replaceChildren(el("li", {}, el("span", { text: "Sources report here after the first search." }))); return; }
+    ul.replaceChildren(...s.map((src) => {
+      const state = src.state === "ok" ? `${src.count} listing${src.count === 1 ? "" : "s"}`
+        : src.state === "off" ? "Off" : "Not working";
+      return el("li", {},
+        el("span", { text: src.name }),
+        el("span", { class: "state" + (src.state === "ok" ? " ok" : ""), text: state }),
+        src.message ? el("span", { class: "msg", text: src.message }) : null
+      );
+    }));
+  }
+
+  function syncControls() {
+    $("t-seattle").setAttribute("aria-pressed", String(ui.seattle));
+    $("t-senior").setAttribute("aria-pressed", String(ui.hideSenior));
+    $("sort").value = ui.sort;
+  }
+
+  function render() {
+    const p = pool();
+    renderFacts(p);
+    renderList();
+    syncControls();
+  }
+
+  function clearFilters() {
+    ui.view = "all"; ui.q = ""; $("q").value = "";
+    ui.seattle = false; store.set("jf.seattle", false);
+    render();
+  }
+
+  // ---------- loading ----------
+  async function getJSON(path) {
+    const res = await fetch(`${path}?t=${Date.now()}`, { cache: "no-store" });
+    if (!res.ok) throw new Error(`${path} returned ${res.status}`);
+    return res.json();
+  }
+
+  async function load() {
+    $("status").textContent = "Loading roles…";
+    try {
+      const [cfg, jobs] = await Promise.all([getJSON("config.json").catch(() => ({})), getJSON("data/jobs.json")]);
+      config = Object.assign({ quick_links: [], categories: [] }, cfg);
+      data = Object.assign({ meta: {}, jobs: [] }, jobs);
+      if (!Array.isArray(data.jobs)) data.jobs = [];
+    } catch (err) {
+      $("status").textContent = `Couldn't load the role list (${err.message}). Check that data/jobs.json is in the repository, then reload.`;
+      return;
+    }
+    const slug = repoSlug();
+    const run = $("run-btn");
+    if (slug) {
+      run.href = `https://github.com/${slug}/actions/workflows/update.yml`;
+      run.removeAttribute("aria-disabled");
+    } else {
+      run.removeAttribute("href");
+      run.setAttribute("aria-disabled", "true");
+      $("run-hint").textContent = "The \"Run a fresh search\" button works once this page is published on GitHub Pages.";
+    }
+    renderLinks();
+    renderSources();
+    render();
+  }
+
+  // ---------- events ----------
+  let qTimer;
+  $("q").addEventListener("input", (e) => { clearTimeout(qTimer); qTimer = setTimeout(() => { ui.q = e.target.value; render(); }, 120); });
+  $("t-seattle").addEventListener("click", () => { ui.seattle = !ui.seattle; store.set("jf.seattle", ui.seattle); render(); });
+  $("t-senior").addEventListener("click", () => { ui.hideSenior = !ui.hideSenior; store.set("jf.hideSenior", ui.hideSenior); render(); });
+  $("sort").addEventListener("change", (e) => { ui.sort = e.target.value; store.set("jf.sort", ui.sort); render(); });
+  $("reload-btn").addEventListener("click", load);
+
+  load();
+})();
+</script>
+</body>
+</html>

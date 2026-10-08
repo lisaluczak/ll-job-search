@@ -1,0 +1,360 @@
+{
+  "site_title": "Job Facts",
+  "repo": "",
+  "_repo_note": "Leave blank when the site lives at USERNAME.github.io/REPO. Fill in as \"username/repo\" only if you use a custom domain.",
+  "_keyword_note": "Keywords match whole words, case-insensitive. End a keyword with * to match any word that starts with it (epidemiolog* matches epidemiologist and epidemiology).",
+  "location": {
+    "label": "Seattle area",
+    "adzuna_where": "Seattle, WA",
+    "radius_km": 30,
+    "usajobs_location": "Seattle, Washington",
+    "usajobs_radius_miles": 20,
+    "amazon_location": "Seattle, WA, United States",
+    "allowed_locations": [
+      "seattle",
+      "shoreline",
+      "lake forest park",
+      "lynnwood",
+      "edmonds",
+      "mountlake terrace",
+      "bothell",
+      "kenmore",
+      "kirkland",
+      "redmond",
+      "bellevue",
+      "mercer island",
+      "renton",
+      "tukwila",
+      "burien",
+      "seatac",
+      "king county",
+      "statewide",
+      "multiple locations",
+      "various locations"
+    ],
+    "include_remote": true
+  },
+  "search_terms": [
+    "dietitian",
+    "nutrition",
+    "nutritionist",
+    "WIC",
+    "public health",
+    "epidemiologist",
+    "maternal child health",
+    "food policy",
+    "food regulatory",
+    "food security",
+    "global health",
+    "research coordinator"
+  ],
+  "scoring": {
+    "min_score": 4,
+    "full_match_score": 14,
+    "title": {
+      "dietitian*": 6,
+      "dietician*": 6,
+      "nutrition*": 6,
+      "wic": 6,
+      "epidemiolog*": 5,
+      "maternal": 5,
+      "child health": 5,
+      "infant*": 4,
+      "public health": 5,
+      "food policy": 6,
+      "food security": 5,
+      "food access": 5,
+      "school meal*": 6,
+      "school nutrition": 2,
+      "food is medicine": 6,
+      "regulatory": 3,
+      "labeling": 4,
+      "labelling": 4,
+      "scientific affairs": 5,
+      "food safety": 2,
+      "global health": 4,
+      "health educator": 3,
+      "research coordinator": 3,
+      "research associate": 3,
+      "research scientist": 3,
+      "program officer": 2,
+      "program associate": 2,
+      "program coordinator": 2,
+      "evaluation": 2,
+      "community health": 3,
+      "lactation": 4
+    },
+    "text": {
+      "nutrition*": 2,
+      "dietitian*": 2,
+      "wic": 2,
+      "mph": 2,
+      "public health": 1,
+      "epidemiolog*": 1,
+      "maternal": 1,
+      "child*": 1,
+      "food": 1,
+      "fda": 2,
+      "usda": 2,
+      "cfr": 2,
+      "labeling": 1,
+      "school meal*": 2,
+      "global health": 1,
+      "sas": 1,
+      "stata": 1
+    },
+    "text_cap": 6,
+    "penalties": {
+      "director": -4,
+      "vice president": -8,
+      "chief": -5,
+      "deputy director": -3,
+      "head of": -3,
+      "postdoc*": -4,
+      "professor": -4,
+      "faculty": -3,
+      "intern": -5,
+      "internship": -5,
+      "assistant": -2,
+      "technician": -3,
+      "aide": -4,
+      "nurse": -5,
+      "rn": -5,
+      "physician": -6,
+      "pharmac*": -6,
+      "veterinar*": -6,
+      "engineer*": -6,
+      "software": -6,
+      "developer": -4,
+      "industrial hygien*": -6,
+      "environmental health": -4,
+      "safety specialist": -5,
+      "ehs": -5,
+      "hse": -5,
+      "construction": -6,
+      "custodian": -6,
+      "chef": -3,
+      "cook": -4,
+      "driver": -6,
+      "sales": -4,
+      "account manager": -5
+    }
+  },
+  "senior_words": [
+    "director",
+    "vice president",
+    "chief",
+    "principal",
+    "deputy",
+    "head of",
+    "senior program officer",
+    "senior research scientist",
+    "senior strategy officer"
+  ],
+  "categories": [
+    {
+      "name": "Global health",
+      "words": [
+        "global",
+        "international",
+        "gates",
+        "path",
+        "foundation"
+      ]
+    },
+    {
+      "name": "Public health & WIC",
+      "words": [
+        "wic",
+        "public health",
+        "county",
+        "department of health",
+        "community health",
+        "health educator",
+        "maternal",
+        "prevention",
+        "first steps"
+      ]
+    },
+    {
+      "name": "Regulatory & industry",
+      "words": [
+        "regulatory",
+        "compliance",
+        "labeling",
+        "food safety",
+        "quality",
+        "scientific affairs",
+        "product*",
+        "amazon",
+        "starbucks",
+        "darigold"
+      ]
+    },
+    {
+      "name": "Food policy & systems",
+      "words": [
+        "policy",
+        "food security",
+        "food access",
+        "school meal*",
+        "procurement",
+        "food bank",
+        "advocacy",
+        "food system*",
+        "food is medicine"
+      ]
+    },
+    {
+      "name": "Research",
+      "words": [
+        "research*",
+        "study",
+        "epidemiolog*",
+        "scientist",
+        "evaluation",
+        "data",
+        "analyst",
+        "biostat*"
+      ]
+    },
+    {
+      "name": "Clinical",
+      "words": [
+        "dietitian*",
+        "dietician*",
+        "clinical",
+        "inpatient",
+        "outpatient",
+        "hospital",
+        "clinic*",
+        "medical center",
+        "per diem"
+      ]
+    }
+  ],
+  "max_age_days": 45,
+  "sources": [
+    {
+      "type": "adzuna",
+      "name": "Adzuna (many job boards)",
+      "enabled": true
+    },
+    {
+      "type": "usajobs",
+      "name": "USAJobs (federal, e.g. VA, FDA)",
+      "enabled": true
+    },
+    {
+      "type": "workday",
+      "name": "Gates Foundation",
+      "url": "https://gatesfoundation.wd1.myworkdayjobs.com/Gates",
+      "enabled": true,
+      "terms": [
+        "nutrition",
+        "maternal",
+        "child health",
+        "global health",
+        "program coordinator",
+        "program associate",
+        "regulatory"
+      ]
+    },
+    {
+      "type": "amazon",
+      "name": "Amazon & Whole Foods",
+      "enabled": true,
+      "terms": [
+        "nutrition",
+        "dietitian",
+        "food labeling",
+        "food regulatory",
+        "food safety"
+      ]
+    },
+    {
+      "type": "icims",
+      "name": "Fred Hutch",
+      "url": "https://careers-fhcrc.icims.com",
+      "enabled": true,
+      "terms": [
+        "dietitian",
+        "nutrition",
+        "health educator",
+        "research coordinator",
+        "epidemiology"
+      ]
+    },
+    {
+      "type": "uw_sph_board",
+      "name": "UW Public Health job board",
+      "url": "https://sph.washington.edu/careers/jobs",
+      "enabled": true,
+      "pages": 3
+    },
+    {
+      "type": "neogov_rss",
+      "name": "King County",
+      "agency": "kingcounty",
+      "enabled": true
+    },
+    {
+      "type": "neogov_rss",
+      "name": "Washington State",
+      "agency": "washington",
+      "enabled": true
+    },
+    {
+      "type": "neogov_rss",
+      "name": "City of Seattle",
+      "agency": "seattle",
+      "enabled": true
+    }
+  ],
+  "quick_links": [
+    {
+      "name": "Google Jobs: dietitian or nutrition near Seattle",
+      "url": "https://www.google.com/search?q=dietitian+OR+nutrition+jobs+near+Seattle+WA&ibp=htl;jobs"
+    },
+    {
+      "name": "LinkedIn: nutrition and public health, past week",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=nutrition%20OR%20dietitian%20OR%20%22public%20health%22&location=Seattle%2C%20Washington%2C%20United%20States&f_TPR=r604800"
+    },
+    {
+      "name": "Indeed: nutrition or dietitian, past week",
+      "url": "https://www.indeed.com/jobs?q=nutrition+OR+dietitian&l=Seattle%2C+WA&fromage=7"
+    },
+    {
+      "name": "King County jobs (WIC and public health)",
+      "url": "https://www.governmentjobs.com/careers/kingcounty?keywords=nutrition"
+    },
+    {
+      "name": "Washington State jobs (Dept. of Health)",
+      "url": "https://www.governmentjobs.com/careers/washington?keywords=nutrition"
+    },
+    {
+      "name": "University of Washington jobs",
+      "url": "https://www.washington.edu/jobs/"
+    },
+    {
+      "name": "Fred Hutch careers",
+      "url": "https://careers-fhcrc.icims.com/jobs/search?ss=1&searchKeyword=nutrition"
+    },
+    {
+      "name": "Seattle Children's careers",
+      "url": "https://www.seattlechildrens.org/careers/"
+    },
+    {
+      "name": "Gates Foundation careers",
+      "url": "https://gatesfoundation.wd1.myworkdayjobs.com/Gates"
+    },
+    {
+      "name": "UW Public Health job board",
+      "url": "https://sph.washington.edu/careers/jobs"
+    },
+    {
+      "name": "Global Child Nutrition Foundation",
+      "url": "https://gcnf.org"
+    }
+  ]
+}
