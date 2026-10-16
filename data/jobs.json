@@ -1,8 +1,8 @@
 {
  "meta": {
-  "last_updated": "2026-10-15T14:28:14+00:00",
+  "last_updated": "2026-10-16T00:33:14+00:00",
   "location_label": "Seattle area",
-  "total": 5,
+  "total": 6,
   "sources": [
    {
     "name": "Adzuna (many job boards)",
@@ -22,21 +22,21 @@
     "name": "Gates Foundation",
     "type": "workday",
     "state": "ok",
-    "count": 42,
+    "count": 48,
     "message": ""
    },
    {
     "name": "Amazon & Whole Foods",
     "type": "amazon",
     "state": "ok",
-    "count": 83,
+    "count": 84,
     "message": ""
    },
    {
     "name": "Fred Hutch",
     "type": "icims",
     "state": "ok",
-    "count": 60,
+    "count": 63,
     "message": ""
    },
    {
@@ -50,27 +50,63 @@
     "name": "King County",
     "type": "neogov_rss",
     "state": "ok",
-    "count": 117,
+    "count": 122,
     "message": ""
    },
    {
     "name": "Washington State",
     "type": "neogov_rss",
     "state": "ok",
-    "count": 699,
+    "count": 744,
     "message": ""
    },
    {
     "name": "City of Seattle",
     "type": "neogov_rss",
     "state": "ok",
-    "count": 57,
+    "count": 59,
     "message": ""
    }
   ],
   "version": 1
  },
  "jobs": [
+  {
+   "id": "2dea9d2b8c59",
+   "title": "Nutrition Assistant - WIC Program",
+   "org": "King County",
+   "location": "North Public Health Center at Meridian - 10521 Meridian Ave N, 2nd Floor, Seattle, WA. 98133",
+   "url": "https://www.governmentjobs.com/careers/kingcounty/jobs/5516566-0",
+   "posted": "2026-10-15T18:49:01+00:00",
+   "first_seen": "2026-10-16T00:33:14+00:00",
+   "last_seen": "2026-10-16T00:33:14+00:00",
+   "salary": "",
+   "category": "Public health & WIC",
+   "score": 16,
+   "match": 99,
+   "senior": false,
+   "remote": false,
+   "seattle": true,
+   "source": "King County"
+  },
+  {
+   "id": "b2f5d6cbf79f",
+   "title": "Nurse Supervisor - First Steps and WIC Programs at White Center Public Health Center",
+   "org": "King County",
+   "location": "Various Locations throughout King County",
+   "url": "https://www.governmentjobs.com/careers/kingcounty/jobs/5499363-0",
+   "posted": "2026-10-15T23:35:29+00:00",
+   "first_seen": "2026-10-16T00:33:14+00:00",
+   "last_seen": "2026-10-16T00:33:14+00:00",
+   "salary": "",
+   "category": "Public health & WIC",
+   "score": 12,
+   "match": 86,
+   "senior": false,
+   "remote": false,
+   "seattle": false,
+   "source": "King County"
+  },
   {
    "id": "65382c7007d0",
    "title": "Registered Dietitian II",
@@ -79,7 +115,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31517/registered-dietitian-ii/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-10-15T14:28:14+00:00",
+   "last_seen": "2026-10-16T00:33:14+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -97,7 +133,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31343/registered-dietitian-i/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-10-15T14:28:14+00:00",
+   "last_seen": "2026-10-16T00:33:14+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -108,24 +144,6 @@
    "source": "Fred Hutch"
   },
   {
-   "id": "24dfb542f687",
-   "title": "Nurse Supervisor - First Steps and WIC Programs",
-   "org": "King County",
-   "location": "Various Locations throughout King County",
-   "url": "https://www.governmentjobs.com/careers/kingcounty/jobs/5455493-0",
-   "posted": "2026-10-03T05:48:30+00:00",
-   "first_seen": "2026-10-14T14:26:21+00:00",
-   "last_seen": "2026-10-15T14:28:14+00:00",
-   "salary": "",
-   "category": "Public health & WIC",
-   "score": 7,
-   "match": 50,
-   "senior": false,
-   "remote": false,
-   "seattle": false,
-   "source": "King County"
-  },
-  {
    "id": "eb315e84ef5b",
    "title": "Peer Community Specialist",
    "org": "King County",
@@ -133,7 +151,7 @@
    "url": "https://www.governmentjobs.com/careers/kingcounty/jobs/5497727-0",
    "posted": "2026-10-14T15:23:22+00:00",
    "first_seen": "2026-10-13T14:17:54+00:00",
-   "last_seen": "2026-10-15T14:28:14+00:00",
+   "last_seen": "2026-10-16T00:33:14+00:00",
    "salary": "",
    "category": "Public health & WIC",
    "score": 4,
@@ -149,9 +167,9 @@
    "org": "Gates Foundation",
    "location": "Seattle, WA",
    "url": "https://gatesfoundation.wd1.myworkdayjobs.com/en-US/Gates/job/Seattle-WA/Senior-Officer--Model-Frameworks---Global-Health_B021786-1",
-   "posted": "2026-10-05T14:28:18+00:00",
+   "posted": "2026-10-06T00:33:19+00:00",
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-10-15T14:28:14+00:00",
+   "last_seen": "2026-10-16T00:33:14+00:00",
    "salary": "",
    "category": "Global health",
    "score": 4,
