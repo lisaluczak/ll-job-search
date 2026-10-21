@@ -1,6 +1,6 @@
 {
  "meta": {
-  "last_updated": "2026-10-21T00:34:13+00:00",
+  "last_updated": "2026-10-21T14:28:31+00:00",
   "location_label": "Seattle area",
   "total": 5,
   "sources": [
@@ -22,14 +22,14 @@
     "name": "Gates Foundation",
     "type": "workday",
     "state": "ok",
-    "count": 37,
+    "count": 39,
     "message": ""
    },
    {
     "name": "Amazon & Whole Foods",
     "type": "amazon",
     "state": "ok",
-    "count": 92,
+    "count": 83,
     "message": ""
    },
    {
@@ -50,14 +50,14 @@
     "name": "King County",
     "type": "neogov_rss",
     "state": "ok",
-    "count": 110,
+    "count": 106,
     "message": ""
    },
    {
     "name": "Washington State",
     "type": "neogov_rss",
     "state": "ok",
-    "count": 729,
+    "count": 691,
     "message": ""
    },
    {
@@ -79,7 +79,7 @@
    "url": "https://www.governmentjobs.com/careers/kingcounty/jobs/5516566-0",
    "posted": "2026-10-15T18:49:01+00:00",
    "first_seen": "2026-10-16T00:33:14+00:00",
-   "last_seen": "2026-10-21T00:34:13+00:00",
+   "last_seen": "2026-10-21T14:28:31+00:00",
    "salary": "",
    "category": "Public health & WIC",
    "score": 16,
@@ -97,7 +97,7 @@
    "url": "https://www.governmentjobs.com/careers/kingcounty/jobs/5499363-0",
    "posted": "2026-10-15T23:35:29+00:00",
    "first_seen": "2026-10-16T00:33:14+00:00",
-   "last_seen": "2026-10-21T00:34:13+00:00",
+   "last_seen": "2026-10-21T14:28:31+00:00",
    "salary": "",
    "category": "Public health & WIC",
    "score": 12,
@@ -115,7 +115,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31517/registered-dietitian-ii/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-10-21T00:34:13+00:00",
+   "last_seen": "2026-10-21T14:28:31+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -133,7 +133,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31343/registered-dietitian-i/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-10-21T00:34:13+00:00",
+   "last_seen": "2026-10-21T14:28:31+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -151,7 +151,7 @@
    "url": "https://www.governmentjobs.com/careers/kingcounty/jobs/5497727-0",
    "posted": "2026-10-14T15:23:22+00:00",
    "first_seen": "2026-10-13T14:17:54+00:00",
-   "last_seen": "2026-10-21T00:34:13+00:00",
+   "last_seen": "2026-10-21T14:28:31+00:00",
    "salary": "",
    "category": "Public health & WIC",
    "score": 4,
