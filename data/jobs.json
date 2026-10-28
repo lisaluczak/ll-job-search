@@ -1,8 +1,8 @@
 {
  "meta": {
-  "last_updated": "2026-10-27T14:42:26+00:00",
+  "last_updated": "2026-10-28T00:44:08+00:00",
   "location_label": "Seattle area",
-  "total": 4,
+  "total": 5,
   "sources": [
    {
     "name": "Adzuna (many job boards)",
@@ -22,21 +22,21 @@
     "name": "Gates Foundation",
     "type": "workday",
     "state": "ok",
-    "count": 48,
+    "count": 49,
     "message": ""
    },
    {
     "name": "Amazon & Whole Foods",
     "type": "amazon",
     "state": "ok",
-    "count": 66,
+    "count": 64,
     "message": ""
    },
    {
     "name": "Fred Hutch",
     "type": "icims",
     "state": "ok",
-    "count": 77,
+    "count": 76,
     "message": ""
    },
    {
@@ -50,21 +50,21 @@
     "name": "King County",
     "type": "neogov_rss",
     "state": "ok",
-    "count": 100,
+    "count": 101,
     "message": ""
    },
    {
     "name": "Washington State",
     "type": "neogov_rss",
     "state": "ok",
-    "count": 657,
+    "count": 698,
     "message": ""
    },
    {
     "name": "City of Seattle",
     "type": "neogov_rss",
     "state": "ok",
-    "count": 70,
+    "count": 77,
     "message": ""
    }
   ],
@@ -79,7 +79,7 @@
    "url": "https://www.governmentjobs.com/careers/kingcounty/jobs/5516566-0",
    "posted": "2026-10-15T18:49:01+00:00",
    "first_seen": "2026-10-16T00:33:14+00:00",
-   "last_seen": "2026-10-27T14:42:26+00:00",
+   "last_seen": "2026-10-28T00:44:08+00:00",
    "salary": "",
    "category": "Public health & WIC",
    "score": 16,
@@ -97,7 +97,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31517/registered-dietitian-ii/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-10-27T14:42:26+00:00",
+   "last_seen": "2026-10-28T00:44:08+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -115,7 +115,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31343/registered-dietitian-i/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-10-27T14:42:26+00:00",
+   "last_seen": "2026-10-28T00:44:08+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -131,9 +131,9 @@
    "org": "Gates Foundation",
    "location": "Seattle, WA",
    "url": "https://gatesfoundation.wd1.myworkdayjobs.com/en-US/Gates/job/Seattle-WA/Program-Officer--Maternal-and-Child-Survival---Women-s-Health_B021810-1",
-   "posted": "2026-10-23T14:42:28+00:00",
+   "posted": "2026-10-24T00:44:10+00:00",
    "first_seen": "2026-10-24T00:39:48+00:00",
-   "last_seen": "2026-10-27T14:42:26+00:00",
+   "last_seen": "2026-10-28T00:44:08+00:00",
    "salary": "",
    "category": "Global health",
    "score": 7,
@@ -142,6 +142,24 @@
    "remote": false,
    "seattle": true,
    "source": "Gates Foundation"
+  },
+  {
+   "id": "2cecbae07ffa",
+   "title": "Food Policy Programs Planner",
+   "org": "City of Seattle",
+   "location": "Seattle Municipal Tower, 700 5th Ave., Seattle",
+   "url": "https://www.governmentjobs.com/careers/seattle/jobs/5522638-0",
+   "posted": "2026-10-27T16:26:48+00:00",
+   "first_seen": "2026-10-28T00:44:08+00:00",
+   "last_seen": "2026-10-28T00:44:08+00:00",
+   "salary": "",
+   "category": "Food policy & systems",
+   "score": 6,
+   "match": 43,
+   "senior": false,
+   "remote": false,
+   "seattle": true,
+   "source": "City of Seattle"
   }
  ]
 }
