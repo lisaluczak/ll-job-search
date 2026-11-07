@@ -1,6 +1,6 @@
 {
  "meta": {
-  "last_updated": "2026-11-07T00:51:40+00:00",
+  "last_updated": "2026-11-07T14:35:26+00:00",
   "location_label": "Seattle area",
   "total": 5,
   "sources": [
@@ -22,7 +22,7 @@
     "name": "Gates Foundation",
     "type": "workday",
     "state": "ok",
-    "count": 82,
+    "count": 78,
     "message": ""
    },
    {
@@ -57,7 +57,7 @@
     "name": "Washington State",
     "type": "neogov_rss",
     "state": "ok",
-    "count": 652,
+    "count": 645,
     "message": ""
    },
    {
@@ -79,7 +79,7 @@
    "url": "https://www.governmentjobs.com/careers/kingcounty/jobs/5529199-0",
    "posted": "2026-10-28T16:18:01+00:00",
    "first_seen": "2026-10-29T00:44:08+00:00",
-   "last_seen": "2026-11-07T00:51:40+00:00",
+   "last_seen": "2026-11-07T14:35:26+00:00",
    "salary": "",
    "category": "Public health & WIC",
    "score": 12,
@@ -97,7 +97,7 @@
    "url": "https://www.governmentjobs.com/careers/washington/jobs/5538748-0",
    "posted": "2026-11-05T17:33:20+00:00",
    "first_seen": "2026-11-06T00:55:29+00:00",
-   "last_seen": "2026-11-07T00:51:40+00:00",
+   "last_seen": "2026-11-07T14:35:26+00:00",
    "salary": "$71,136.00 - $95,676.00",
    "category": "Other",
    "score": 9,
@@ -115,7 +115,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31517/registered-dietitian-ii/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-11-07T00:51:40+00:00",
+   "last_seen": "2026-11-07T14:35:26+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -133,7 +133,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31343/registered-dietitian-i/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-11-07T00:51:40+00:00",
+   "last_seen": "2026-11-07T14:35:26+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -149,9 +149,9 @@
    "org": "Gates Foundation",
    "location": "Seattle, WA",
    "url": "https://gatesfoundation.wd1.myworkdayjobs.com/en-US/Gates/job/Seattle-WA/Program-Officer--Maternal-and-Child-Survival---Women-s-Health_B021810-1",
-   "posted": "2026-10-24T00:51:42+00:00",
+   "posted": "2026-10-23T14:35:28+00:00",
    "first_seen": "2026-10-24T00:39:48+00:00",
-   "last_seen": "2026-11-07T00:51:40+00:00",
+   "last_seen": "2026-11-07T14:35:26+00:00",
    "salary": "",
    "category": "Global health",
    "score": 7,
