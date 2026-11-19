@@ -1,8 +1,8 @@
 {
  "meta": {
-  "last_updated": "2026-11-19T06:54:09+00:00",
+  "last_updated": "2026-11-19T21:59:15+00:00",
   "location_label": "Seattle area",
-  "total": 5,
+  "total": 4,
   "sources": [
    {
     "name": "Adzuna (many job boards)",
@@ -29,14 +29,14 @@
     "name": "Amazon & Whole Foods",
     "type": "amazon",
     "state": "ok",
-    "count": 98,
+    "count": 95,
     "message": ""
    },
    {
     "name": "Fred Hutch",
     "type": "icims",
     "state": "ok",
-    "count": 67,
+    "count": 65,
     "message": ""
    },
    {
@@ -50,14 +50,14 @@
     "name": "King County",
     "type": "neogov_rss",
     "state": "ok",
-    "count": 129,
+    "count": 127,
     "message": ""
    },
    {
     "name": "Washington State",
     "type": "neogov_rss",
     "state": "ok",
-    "count": 638,
+    "count": 649,
     "message": ""
    },
    {
@@ -72,24 +72,6 @@
  },
  "jobs": [
   {
-   "id": "a09ff19a9cc4",
-   "title": "Administrative Program Specialist 2 - Child Nutrition Services",
-   "org": "Washington State",
-   "location": "Multiple Locations - Eastern Washington",
-   "url": "https://www.governmentjobs.com/careers/washington/jobs/5538748-0",
-   "posted": "2026-11-12T16:41:58+00:00",
-   "first_seen": "2026-11-06T00:55:29+00:00",
-   "last_seen": "2026-11-19T06:54:09+00:00",
-   "salary": "$71,136.00 - $95,676.00",
-   "category": "Other",
-   "score": 9,
-   "match": 64,
-   "senior": false,
-   "remote": false,
-   "seattle": false,
-   "source": "Washington State"
-  },
-  {
    "id": "65382c7007d0",
    "title": "Registered Dietitian II",
    "org": "Fred Hutch",
@@ -97,7 +79,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31517/registered-dietitian-ii/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-11-19T06:54:09+00:00",
+   "last_seen": "2026-11-19T21:59:15+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -115,7 +97,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31343/registered-dietitian-i/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-11-19T06:54:09+00:00",
+   "last_seen": "2026-11-19T21:59:15+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -133,7 +115,7 @@
    "url": "https://www.governmentjobs.com/careers/washington/jobs/5553413-0",
    "posted": "2026-11-17T23:09:45+00:00",
    "first_seen": "2026-11-18T06:53:34+00:00",
-   "last_seen": "2026-11-19T06:54:09+00:00",
+   "last_seen": "2026-11-19T21:59:15+00:00",
    "salary": "",
    "category": "Research",
    "score": 7,
@@ -151,7 +133,7 @@
    "url": "https://www.governmentjobs.com/careers/washington/jobs/5548773-0",
    "posted": "2026-11-12T23:21:03+00:00",
    "first_seen": "2026-11-13T06:03:43+00:00",
-   "last_seen": "2026-11-19T06:54:09+00:00",
+   "last_seen": "2026-11-19T21:59:15+00:00",
    "salary": "",
    "category": "Other",
    "score": 4,
