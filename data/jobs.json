@@ -1,8 +1,8 @@
 {
  "meta": {
-  "last_updated": "2026-11-18T21:43:44+00:00",
+  "last_updated": "2026-11-19T06:54:09+00:00",
   "location_label": "Seattle area",
-  "total": 7,
+  "total": 5,
   "sources": [
    {
     "name": "Adzuna (many job boards)",
@@ -29,14 +29,14 @@
     "name": "Amazon & Whole Foods",
     "type": "amazon",
     "state": "ok",
-    "count": 97,
+    "count": 98,
     "message": ""
    },
    {
     "name": "Fred Hutch",
     "type": "icims",
     "state": "ok",
-    "count": 66,
+    "count": 67,
     "message": ""
    },
    {
@@ -49,23 +49,23 @@
    {
     "name": "King County",
     "type": "neogov_rss",
-    "state": "error",
-    "count": 0,
-    "message": "RuntimeError: Feed not reachable (HTTPSConnectionPool(host='www.governmentjobs.com', port=443): Max retries exceeded with url: /careers/kingcounty/rss (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.governmentjobs.com', port=443) at 0x78f364cf5fa0>, 'Connection to www.governmentjobs.com ti"
+    "state": "ok",
+    "count": 129,
+    "message": ""
    },
    {
     "name": "Washington State",
     "type": "neogov_rss",
-    "state": "error",
-    "count": 0,
-    "message": "RuntimeError: Feed not reachable (HTTPSConnectionPool(host='www.governmentjobs.com', port=443): Max retries exceeded with url: /careers/washington/rss (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.governmentjobs.com', port=443) at 0x78f364cf7170>, 'Connection to www.governmentjobs.com ti"
+    "state": "ok",
+    "count": 638,
+    "message": ""
    },
    {
     "name": "City of Seattle",
     "type": "neogov_rss",
-    "state": "error",
-    "count": 0,
-    "message": "RuntimeError: Feed not reachable (HTTPSConnectionPool(host='www.governmentjobs.com', port=443): Max retries exceeded with url: /careers/seattle/rss (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.governmentjobs.com', port=443) at 0x78f364d20320>, 'Connection to www.governmentjobs.com timed"
+    "state": "ok",
+    "count": 72,
+    "message": ""
    }
   ],
   "version": 1
@@ -79,7 +79,7 @@
    "url": "https://www.governmentjobs.com/careers/washington/jobs/5538748-0",
    "posted": "2026-11-12T16:41:58+00:00",
    "first_seen": "2026-11-06T00:55:29+00:00",
-   "last_seen": "2026-11-18T06:53:34+00:00",
+   "last_seen": "2026-11-19T06:54:09+00:00",
    "salary": "$71,136.00 - $95,676.00",
    "category": "Other",
    "score": 9,
@@ -97,7 +97,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31517/registered-dietitian-ii/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-11-18T21:43:44+00:00",
+   "last_seen": "2026-11-19T06:54:09+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -115,7 +115,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31343/registered-dietitian-i/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-11-18T21:43:44+00:00",
+   "last_seen": "2026-11-19T06:54:09+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -133,47 +133,11 @@
    "url": "https://www.governmentjobs.com/careers/washington/jobs/5553413-0",
    "posted": "2026-11-17T23:09:45+00:00",
    "first_seen": "2026-11-18T06:53:34+00:00",
-   "last_seen": "2026-11-18T06:53:34+00:00",
+   "last_seen": "2026-11-19T06:54:09+00:00",
    "salary": "",
    "category": "Research",
    "score": 7,
    "match": 50,
-   "senior": false,
-   "remote": false,
-   "seattle": false,
-   "source": "Washington State"
-  },
-  {
-   "id": "b836acb0339d",
-   "title": "Public Health Community Engagement Strategist (MA 5) DOH9019",
-   "org": "Washington State",
-   "location": "Multiple Locations Statewide",
-   "url": "https://www.governmentjobs.com/careers/washington/jobs/5547022-0",
-   "posted": "2026-11-12T18:33:17+00:00",
-   "first_seen": "2026-11-11T05:40:54+00:00",
-   "last_seen": "2026-11-18T06:53:34+00:00",
-   "salary": "",
-   "category": "Public health & WIC",
-   "score": 6,
-   "match": 43,
-   "senior": false,
-   "remote": false,
-   "seattle": false,
-   "source": "Washington State"
-  },
-  {
-   "id": "6136457ed285",
-   "title": "Business Operations Analyst, Public Health Laboratories (MA 3) DOH9031",
-   "org": "Washington State",
-   "location": "King County - Shoreline",
-   "url": "https://www.governmentjobs.com/careers/washington/jobs/5546791-0",
-   "posted": "2026-11-10T22:56:08+00:00",
-   "first_seen": "2026-11-11T05:40:54+00:00",
-   "last_seen": "2026-11-18T06:53:34+00:00",
-   "salary": "",
-   "category": "Public health & WIC",
-   "score": 6,
-   "match": 43,
    "senior": false,
    "remote": false,
    "seattle": false,
@@ -187,7 +151,7 @@
    "url": "https://www.governmentjobs.com/careers/washington/jobs/5548773-0",
    "posted": "2026-11-12T23:21:03+00:00",
    "first_seen": "2026-11-13T06:03:43+00:00",
-   "last_seen": "2026-11-18T06:53:34+00:00",
+   "last_seen": "2026-11-19T06:54:09+00:00",
    "salary": "",
    "category": "Other",
    "score": 4,
