@@ -1,6 +1,6 @@
 {
  "meta": {
-  "last_updated": "2026-11-24T01:29:58+00:00",
+  "last_updated": "2026-11-24T09:24:43+00:00",
   "location_label": "Seattle area",
   "total": 6,
   "sources": [
@@ -36,7 +36,7 @@
     "name": "Fred Hutch",
     "type": "icims",
     "state": "ok",
-    "count": 60,
+    "count": 61,
     "message": ""
    },
    {
@@ -50,14 +50,14 @@
     "name": "King County",
     "type": "neogov_rss",
     "state": "ok",
-    "count": 109,
+    "count": 106,
     "message": ""
    },
    {
     "name": "Washington State",
     "type": "neogov_rss",
     "state": "ok",
-    "count": 642,
+    "count": 593,
     "message": ""
    },
    {
@@ -79,7 +79,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31517/registered-dietitian-ii/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-11-24T01:29:58+00:00",
+   "last_seen": "2026-11-24T09:24:43+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -97,7 +97,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31343/registered-dietitian-i/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-11-24T01:29:58+00:00",
+   "last_seen": "2026-11-24T09:24:43+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -133,7 +133,7 @@
    "url": "https://www.governmentjobs.com/careers/washington/jobs/5553413-0",
    "posted": "2026-11-20T10:36:19+00:00",
    "first_seen": "2026-11-18T06:53:34+00:00",
-   "last_seen": "2026-11-24T01:29:58+00:00",
+   "last_seen": "2026-11-24T09:24:43+00:00",
    "salary": "",
    "category": "Research",
    "score": 7,
@@ -151,7 +151,7 @@
    "url": "https://www.governmentjobs.com/careers/washington/jobs/5548773-0",
    "posted": "2026-11-20T18:22:39+00:00",
    "first_seen": "2026-11-13T06:03:43+00:00",
-   "last_seen": "2026-11-24T01:29:58+00:00",
+   "last_seen": "2026-11-24T09:24:43+00:00",
    "salary": "",
    "category": "Other",
    "score": 4,
