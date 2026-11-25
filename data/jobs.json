@@ -1,8 +1,8 @@
 {
  "meta": {
-  "last_updated": "2026-11-25T07:56:55+00:00",
+  "last_updated": "2026-11-25T22:57:56+00:00",
   "location_label": "Seattle area",
-  "total": 7,
+  "total": 6,
   "sources": [
    {
     "name": "Adzuna (many job boards)",
@@ -29,14 +29,14 @@
     "name": "Amazon & Whole Foods",
     "type": "amazon",
     "state": "ok",
-    "count": 95,
+    "count": 93,
     "message": ""
    },
    {
     "name": "Fred Hutch",
     "type": "icims",
     "state": "ok",
-    "count": 59,
+    "count": 62,
     "message": ""
    },
    {
@@ -49,23 +49,23 @@
    {
     "name": "King County",
     "type": "neogov_rss",
-    "state": "error",
-    "count": 0,
-    "message": "RuntimeError: Feed not reachable (HTTPSConnectionPool(host='www.governmentjobs.com', port=443): Max retries exceeded with url: /careers/kingcounty/rss (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.governmentjobs.com', port=443) at 0x729b0369a660>, 'Connection to www.governmentjobs.com ti"
+    "state": "ok",
+    "count": 115,
+    "message": ""
    },
    {
     "name": "Washington State",
     "type": "neogov_rss",
-    "state": "error",
-    "count": 0,
-    "message": "RuntimeError: Feed not reachable (HTTPSConnectionPool(host='www.governmentjobs.com', port=443): Max retries exceeded with url: /careers/washington/rss (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.governmentjobs.com', port=443) at 0x729b0369b800>, 'Connection to www.governmentjobs.com ti"
+    "state": "ok",
+    "count": 641,
+    "message": ""
    },
    {
     "name": "City of Seattle",
     "type": "neogov_rss",
-    "state": "error",
-    "count": 0,
-    "message": "RuntimeError: Feed not reachable (HTTPSConnectionPool(host='www.governmentjobs.com', port=443): Max retries exceeded with url: /careers/seattle/rss (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.governmentjobs.com', port=443) at 0x729b036c0980>, 'Connection to www.governmentjobs.com timed"
+    "state": "ok",
+    "count": 60,
+    "message": ""
    }
   ],
   "version": 1
@@ -79,7 +79,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31517/registered-dietitian-ii/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-11-25T07:56:55+00:00",
+   "last_seen": "2026-11-25T22:57:56+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -97,7 +97,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31343/registered-dietitian-i/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-11-25T07:56:55+00:00",
+   "last_seen": "2026-11-25T22:57:56+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -126,24 +126,6 @@
    "source": "Gates Foundation"
   },
   {
-   "id": "d9b9f256aba4",
-   "title": "HIV Network Detection and Data to Care Epidemiologist (EPI 3) DOH9037",
-   "org": "Washington State",
-   "location": "Multiple Locations Statewide",
-   "url": "https://www.governmentjobs.com/careers/washington/jobs/5553413-0",
-   "posted": "2026-11-20T10:36:19+00:00",
-   "first_seen": "2026-11-18T06:53:34+00:00",
-   "last_seen": "2026-11-24T23:24:21+00:00",
-   "salary": "",
-   "category": "Research",
-   "score": 7,
-   "match": 50,
-   "senior": false,
-   "remote": false,
-   "seattle": false,
-   "source": "Washington State"
-  },
-  {
    "id": "a18eeb7d14f5",
    "title": "Public Health Advisor 2 (PHA 2) DOH9053",
    "org": "Washington State",
@@ -151,7 +133,7 @@
    "url": "https://www.governmentjobs.com/careers/washington/jobs/5561334-0",
    "posted": "2026-11-24T21:32:41+00:00",
    "first_seen": "2026-11-24T23:24:21+00:00",
-   "last_seen": "2026-11-24T23:24:21+00:00",
+   "last_seen": "2026-11-25T22:57:56+00:00",
    "salary": "",
    "category": "Public health & WIC",
    "score": 6,
@@ -169,7 +151,7 @@
    "url": "https://www.governmentjobs.com/careers/washington/jobs/5548773-0",
    "posted": "2026-11-20T18:22:39+00:00",
    "first_seen": "2026-11-13T06:03:43+00:00",
-   "last_seen": "2026-11-24T23:24:21+00:00",
+   "last_seen": "2026-11-25T22:57:56+00:00",
    "salary": "",
    "category": "Other",
    "score": 4,
