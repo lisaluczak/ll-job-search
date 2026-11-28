@@ -1,6 +1,6 @@
 {
  "meta": {
-  "last_updated": "2026-11-27T22:31:36+00:00",
+  "last_updated": "2026-11-28T07:16:55+00:00",
   "location_label": "Seattle area",
   "total": 5,
   "sources": [
@@ -51,21 +51,21 @@
     "type": "neogov_rss",
     "state": "error",
     "count": 0,
-    "message": "RuntimeError: Feed not reachable (HTTPSConnectionPool(host='www.governmentjobs.com', port=443): Max retries exceeded with url: /careers/kingcounty/rss (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.governmentjobs.com', port=443) at 0x7a13262bcef0>, 'Connection to www.governmentjobs.com ti"
+    "message": "RuntimeError: Feed not reachable (HTTPSConnectionPool(host='www.governmentjobs.com', port=443): Max retries exceeded with url: /careers/kingcounty/rss (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.governmentjobs.com', port=443) at 0x7ad225748ec0>, 'Connection to www.governmentjobs.com ti"
    },
    {
     "name": "Washington State",
     "type": "neogov_rss",
     "state": "error",
     "count": 0,
-    "message": "RuntimeError: Feed not reachable (HTTPSConnectionPool(host='www.governmentjobs.com', port=443): Max retries exceeded with url: /careers/washington/rss (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.governmentjobs.com', port=443) at 0x7a13262be090>, 'Connection to www.governmentjobs.com ti"
+    "message": "RuntimeError: Feed not reachable (HTTPSConnectionPool(host='www.governmentjobs.com', port=443): Max retries exceeded with url: /careers/washington/rss (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.governmentjobs.com', port=443) at 0x7ad22574a090>, 'Connection to www.governmentjobs.com ti"
    },
    {
     "name": "City of Seattle",
     "type": "neogov_rss",
     "state": "error",
     "count": 0,
-    "message": "RuntimeError: Feed not reachable (HTTPSConnectionPool(host='www.governmentjobs.com', port=443): Max retries exceeded with url: /careers/seattle/rss (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.governmentjobs.com', port=443) at 0x7a13262bf1d0>, 'Connection to www.governmentjobs.com timed"
+    "message": "RuntimeError: Feed not reachable (HTTPSConnectionPool(host='www.governmentjobs.com', port=443): Max retries exceeded with url: /careers/seattle/rss (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.governmentjobs.com', port=443) at 0x7ad22574b1d0>, 'Connection to www.governmentjobs.com timed"
    }
   ],
   "version": 1
@@ -79,7 +79,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31517/registered-dietitian-ii/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-11-27T22:31:36+00:00",
+   "last_seen": "2026-11-28T07:16:55+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
@@ -97,7 +97,7 @@
    "url": "https://careers-fhcrc.icims.com/jobs/31343/registered-dietitian-i/job",
    "posted": null,
    "first_seen": "2026-10-08T04:47:33+00:00",
-   "last_seen": "2026-11-27T22:31:36+00:00",
+   "last_seen": "2026-11-28T07:16:55+00:00",
    "salary": "",
    "category": "Clinical",
    "score": 8,
